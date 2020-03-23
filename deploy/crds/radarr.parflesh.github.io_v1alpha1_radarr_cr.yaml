@@ -1,0 +1,7 @@
+apiVersion: radarr.parflesh.github.io/v1alpha1
+kind: Radarr
+metadata:
+  name: example-radarr
+spec:
+  # Add fields here
+  size: 3

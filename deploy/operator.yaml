@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: radarr-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: radarr-operator
+  template:
+    metadata:
+      labels:
+        name: radarr-operator
+    spec:
+      serviceAccountName: radarr-operator
+      containers:
+        - name: radarr-operator
+          image: quay.io/parflesh/radarr-operator
+          command:
+          - radarr-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "radarr-operator"
