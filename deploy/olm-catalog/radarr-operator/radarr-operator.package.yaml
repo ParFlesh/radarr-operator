@@ -1,5 +1,7 @@
 channels:
 - currentCSV: radarr-operator.v0.0.1
   name: alpha
-defaultChannel: alpha
+- currentCSV: radarr-operator.v0.0.1
+  name: stable
+defaultChannel: stable
 packageName: radarr-operator
