@@ -236,7 +236,7 @@ func (r *ReconcileRadarr) newDeployment(cr *radarrv1alpha1.Radarr) (*appsv1.Depl
 					Containers: []corev1.Container{
 						{
 							Name:  "radarr",
-							Image: cr.Status.Image,
+							Image: cr.Spec.Image,
 							Ports: []corev1.ContainerPort{
 								{
 									Name:          "http",
