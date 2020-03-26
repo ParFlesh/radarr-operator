@@ -160,7 +160,7 @@ spec:
                       fieldPath: metadata.name
                 - name: OPERATOR_NAME
                   value: radarr-operator
-                image: quay.io/parflesh/radarr-operator
+                image: quay.io/parflesh/radarr-operator:0.0.1
                 imagePullPolicy: Always
                 name: radarr-operator
                 resources: {}

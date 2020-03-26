@@ -15,7 +15,7 @@ spec:
       serviceAccountName: radarr-operator
       containers:
         - name: radarr-operator
-          image: quay.io/parflesh/radarr-operator
+          image: quay.io/parflesh/radarr-operator:0.0.1
           command:
           - radarr-operator
           imagePullPolicy: Always
